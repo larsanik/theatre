@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ac15f2-05ca-43f9-b1a7-37975864ab5d" name="Changes" comment="django theatre lecture commit_01">
+    <list default="true" id="f3ac15f2-05ca-43f9-b1a7-37975864ab5d" name="Changes" comment="django theatre lecture commit_02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theatre/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theatre/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/larsanik/theatre",
+    "accountId": "d7d52d0d-e214-4532-83e7-5461163f5f2d"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
@@ -32,7 +37,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -66,7 +71,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775132401809</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="django theatre lecture commit_02">
+      <option name="closed" value="true" />
+      <created>1775134791703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775134791703</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +96,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="django theatre lecture commit_00" />
     <MESSAGE value="django theatre lecture commit_01" />
-    <option name="LAST_COMMIT_MESSAGE" value="django theatre lecture commit_01" />
+    <MESSAGE value="django theatre lecture commit_02" />
+    <option name="LAST_COMMIT_MESSAGE" value="django theatre lecture commit_02" />
   </component>
 </project>

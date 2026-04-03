@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'users',
     'plays',
+    'homepage',
     'admin_interface',
     'colorfield',
     'django.contrib.admin',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'theatre.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

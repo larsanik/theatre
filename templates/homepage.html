@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Театр ВМП</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <h1>Добро пожаловать на сайт нашего театра, {{ request.user.username }}!</h1>
+{% else %}
+    <h1>Добро пожаловать на сайт нашего театра!</h1>
+{% endif %}
+</body>
+</html>

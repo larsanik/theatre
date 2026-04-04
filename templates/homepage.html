@@ -10,5 +10,11 @@
 {% else %}
     <h1>Добро пожаловать на сайт нашего театра!</h1>
 {% endif %}
+<table>
+    {% for show in show_list %}
+    <tr> <a href="{{ show.get_absolute_url }}"> {{ show.play.title }}</a> - {{ show.starts_at }} </tr>
+    <br>
+    {% endfor %}
+</table>
 </body>
 </html>

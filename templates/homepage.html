@@ -7,8 +7,18 @@
 <body>
 {% if request.user.is_authenticated %}
     <h1>Добро пожаловать на сайт нашего театра, {{ request.user.username }}!</h1>
+    <!-- <a href="{% url 'logout' %}" >Выйти</a> В моей версии джанго это не работает -->
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-link">Выйти</button>
+    </form>
+    <br>
+    <br>
 {% else %}
     <h1>Добро пожаловать на сайт нашего театра!</h1>
+    <a href="{% url 'login' %}">Войти</a>
+    <br>
+    <br>
 {% endif %}
 <table>
     {% for show in show_list %}

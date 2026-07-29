@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',  # перед подключением приложения с нашим API нужно подключить сам django-rest-framework
+    'api',  # подключили приложение с нашим API
 ]
 
 MIDDLEWARE = [

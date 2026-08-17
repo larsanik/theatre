@@ -8,11 +8,14 @@ from django.db.models import functions
 class Play(models.Model):
     title = models.CharField(max_length=255)
     annotation =models.TextField()
-
+    def __str__(self):
+        return self.title
 
 class Actor(models.Model):
     name = models.CharField(max_length=255)
     birthday = models.DateField(null=True)
+    def __str__(self):
+        return self.name
 
 class ShowManager(models.Manager):
     def active(self):
@@ -24,6 +27,10 @@ class Show(models.Model):
     play = models.ForeignKey(Play, on_delete=models.CASCADE)
     actor = models.ManyToManyField(Actor)
     objects = ShowManager()
+
+    def __str__(self):
+        # Выведет, например: "Наладка на Острогожской — 2027-08-17 17:00:00"
+        return self.play.title
 
     @display
     def play_name(self):

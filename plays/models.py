@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.admin import display
 from django.urls import reverse
 from django.db.models import functions
+from users.models import User
 
 
 # Create your models here.
@@ -38,3 +39,15 @@ class Show(models.Model):
 
     def get_absolute_url(self):
         return reverse('show_detail', kwargs={'pk': self.pk})
+
+
+class Booking(models.Model):
+    show = models.ForeignKey(Show, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    place = models.IntegerField()
+
+    class Meta:
+        # Этот констрейнт позвояет выставить требование уникальности на пару (представление, место)
+        # Это позволит избежать двух бронирований на одно место
+        unique_together = ('show', 'place')

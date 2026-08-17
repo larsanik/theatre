@@ -7,5 +7,13 @@
 <body>
 <p>{{ object.play.title }}</p>
 <p>Постановка начинается в {{ object.starts_at }}</p>
+<p>Актеры:</p>
+<ul>
+    {% for actor in object.actor.all %}
+        <li>{{ actor.name }}</li>
+    {% empty %}
+        <li>Актеры для этого шоу пока не указаны</li>
+    {% endfor %}
+</ul>
 </body>
 </html>

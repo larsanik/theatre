@@ -11,12 +11,24 @@ from api.permissions import IsOwner
 
 
 # Create your views here.
-class ActorListListView(generics.ListAPIView):
+class ActorListListView(generics.ListCreateAPIView):
     serializer_class = ActorListSerializer
     queryset = Actor.objects.all()
     permission_classes = [permissions.IsAuthenticated, IsOwner]
 
-class ShowListListView(generics.ListAPIView):
+    def filter_queryset(self, queryset):
+        return queryset.filter(owner=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+class ShowListListView(generics.ListCreateAPIView):
     serializer_class = ShowListSerializer
     queryset = Show.objects.all()
     permission_classes = [permissions.IsAuthenticated, IsOwner]
+
+    def filter_queryset(self, queryset):
+        return queryset.filter(owner=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
